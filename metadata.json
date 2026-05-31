@@ -1,0 +1,6 @@
+{
+  "name": "KarmaWhores",
+  "description": "Premium Reddit marketing platform. Buy aged Reddit accounts, post karma, comment karma, blog, upvotes, and custom posting services.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
