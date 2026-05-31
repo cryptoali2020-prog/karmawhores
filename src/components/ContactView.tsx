@@ -34,7 +34,7 @@ export default function ContactView() {
     <div className="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
       {/* Title */}
       <div className="text-center max-w-3xl mx-auto mb-12">
-        <span className="text-xs font-bold font-mono text-[#FF4500] uppercase tracking-widest bg-[#FF4500]/10 px-3 py-1 rounded-full border border-[#FF4500]/20">
+        <span className="text-xs font-bold font-mono text-[#c59b27] uppercase tracking-widest bg-[#c59b27]/10 px-3 py-1 rounded-full border border-[#c59b27]/20">
           Reach Our Support Desk
         </span>
         <h2 className="text-3xl sm:text-4xl title-font font-bold text-white mt-3 mb-4 tracking-tight">
@@ -48,14 +48,14 @@ export default function ContactView() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         {/* Support coordinates */}
         <div className="lg:col-span-5 space-y-6">
-          <div className="bg-[#111625] rounded-2xl border border-[#1e293b] p-6 shadow-md shadow-black/10">
+          <div className="bg-[#1c1611] rounded-2xl border border-[#2c2016] p-6 shadow-md shadow-black/10">
             <h3 className="text-lg font-display font-semibold text-white mb-5 pb-3 border-b border-slate-800">
               Support Touchpoints
             </h3>
 
             <div className="space-y-5">
               <div className="flex gap-4 items-start">
-                <div className="p-3 bg-[#FF4500]/10 text-[#FF4500] rounded-xl shrink-0 border border-[#FF4500]/15">
+                <div className="p-3 bg-[#c59b27]/10 text-[#c59b27] rounded-xl shrink-0 border border-[#c59b27]/15">
                   <MapPin size={18} />
                 </div>
                 <div>
@@ -65,12 +65,12 @@ export default function ContactView() {
               </div>
 
               <div className="flex gap-4 items-start">
-                <div className="p-3 bg-[#FFB000]/10 text-[#FFB000] rounded-xl shrink-0 border border-[#FFB000]/15">
+                <div className="p-3 bg-[#dfba6b]/10 text-[#dfba6b] rounded-xl shrink-0 border border-[#dfba6b]/15">
                   <Mail size={18} />
                 </div>
                 <div>
                   <h4 className="text-sm font-semibold text-white">Email Address</h4>
-                  <a href="mailto:support@karmawhores.com" className="text-xs text-slate-400 mt-0.5 hover:text-[#FFB000] font-mono block">
+                  <a href="mailto:support@karmawhores.com" className="text-xs text-slate-400 mt-0.5 hover:text-[#dfba6b] font-mono block">
                     support@karmawhores.com
                   </a>
                 </div>
@@ -103,14 +103,14 @@ export default function ContactView() {
           </div>
 
           {/* Social connection list */}
-          <div className="bg-[#111625] rounded-2xl border border-[#1e293b] p-6 shadow-md shadow-black/10">
+          <div className="bg-[#1c1611] rounded-2xl border border-[#2c2016] p-6 shadow-md shadow-black/10">
             <h4 className="text-sm font-semibold text-white mb-3">Core Social Profiles</h4>
             <div className="space-y-3">
               <a
                 href="https://www.facebook.com/Reddit-accounts-for-sale-500910903614566/"
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center gap-3 p-3 rounded-xl bg-[#162035] hover:bg-[#1f2d4a] text-slate-300 hover:text-white transition-all text-xs border border-[#27314a]"
+                className="flex items-center gap-3 p-3 rounded-xl bg-[#2a1f16] hover:bg-[#382a1e] text-slate-300 hover:text-white transition-all text-xs border border-[#3d2f23]"
               >
                 <Facebook size={16} className="text-[#1877F2]" />
                 <div className="flex flex-col text-left">
@@ -128,7 +128,7 @@ export default function ContactView() {
         </div>
 
         {/* Form panel */}
-        <div className="lg:col-span-7 bg-[#111625] rounded-2xl border border-[#1e293b] p-6 sm:p-8 shadow-md shadow-black/10">
+        <div className="lg:col-span-7 bg-[#1c1611] rounded-2xl border border-[#2c2016] p-6 sm:p-8 shadow-md shadow-black/10">
           <h3 className="text-lg font-display font-semibold text-white mb-1">
             Submit a Help Ticket
           </h3>
@@ -156,7 +156,7 @@ export default function ContactView() {
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   placeholder="John Doe"
-                  className="w-full px-3 py-2 bg-[#0d121f] border border-[#1e293b] rounded-xl text-white text-sm focus:outline-none focus:border-[#FF4500]"
+                  className="w-full px-3 py-2 bg-[#0f0b08] border border-[#2c2016] rounded-xl text-white text-sm focus:outline-none focus:border-[#c59b27]"
                 />
               </div>
 
@@ -168,7 +168,7 @@ export default function ContactView() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="johndoe@example.com"
-                  className="w-full px-3 py-2 bg-[#0d121f] border border-[#1e293b] rounded-xl text-white text-sm focus:outline-none focus:border-[#FF4500]"
+                  className="w-full px-3 py-2 bg-[#0f0b08] border border-[#2c2016] rounded-xl text-white text-sm focus:outline-none focus:border-[#c59b27]"
                 />
               </div>
             </div>
@@ -178,7 +178,7 @@ export default function ContactView() {
               <select
                 value={subject}
                 onChange={(e) => setSubject(e.target.value)}
-                className="w-full px-3 py-2 bg-[#0d121f] border border-[#1e293b] rounded-xl text-white text-sm focus:outline-none focus:border-[#FF4500]"
+                className="w-full px-3 py-2 bg-[#0f0b08] border border-[#2c2016] rounded-xl text-white text-sm focus:outline-none focus:border-[#c59b27]"
               >
                 <option value="accounts">Buying Aged Accounts (Custom/Bulk)</option>
                 <option value="posts">Upvotes & Posting Boost Service</option>
@@ -196,14 +196,14 @@ export default function ContactView() {
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 placeholder="Give us details about your Reddit campaign goals..."
-                className="w-full px-3 py-2 bg-[#0d121f] border border-[#1e293b] rounded-xl text-white text-sm focus:outline-none focus:border-[#FF4500] placeholder:text-slate-600 resize-none"
+                className="w-full px-3 py-2 bg-[#0f0b08] border border-[#2c2016] rounded-xl text-white text-sm focus:outline-none focus:border-[#c59b27] placeholder:text-slate-600 resize-none"
               ></textarea>
             </div>
 
             <button
               type="submit"
               disabled={isSending}
-              className={`w-full py-3 px-5 rounded-xl bg-[#FF4500] hover:bg-[#FF5722] text-white text-sm font-semibold transition-all shadow-md shadow-[#FF4500]/15 flex items-center justify-center gap-2 cursor-pointer ${
+              className={`w-full py-3 px-5 rounded-xl bg-[#c59b27] hover:bg-[#a87f18] text-white text-sm font-semibold transition-all shadow-md shadow-[#c59b27]/15 flex items-center justify-center gap-2 cursor-pointer ${
                 isSending ? 'opacity-75 cursor-not-allowed' : ''
               }`}
             >

@@ -108,7 +108,7 @@ export default function BoostView({ onAddToCart, onNavigateToCart }: BoostViewPr
     <div className="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
       {/* Title */}
       <div className="text-center max-w-3xl mx-auto mb-10">
-        <span className="text-xs font-bold font-mono text-[#FF4500] uppercase tracking-widest bg-[#FF4500]/10 px-3 py-1 rounded-full border border-[#FF4500]/20">
+        <span className="text-xs font-bold font-mono text-[#c59b27] uppercase tracking-widest bg-[#c59b27]/10 px-3 py-1 rounded-full border border-[#c59b27]/20">
           Organic Post Accelerator
         </span>
         <h2 className="text-3xl sm:text-4xl title-font font-bold text-white mt-3 mb-4 tracking-tight">
@@ -127,7 +127,7 @@ export default function BoostView({ onAddToCart, onNavigateToCart }: BoostViewPr
           </div>
           <button
             onClick={onNavigateToCart}
-            className="text-xs font-mono font-bold uppercase underline text-[#FFB000]"
+            className="text-xs font-mono font-bold uppercase underline text-[#dfba6b]"
           >
             Review Cart
           </button>
@@ -141,11 +141,11 @@ export default function BoostView({ onAddToCart, onNavigateToCart }: BoostViewPr
             onClick={() => setActiveSubTab('upvotes')}
             className={`w-full flex items-center gap-3.5 p-4 rounded-xl border text-left transition-all ${
               activeSubTab === 'upvotes'
-                ? 'bg-[#1b253b] border-[#FF4500] text-white shadow-md'
-                : 'bg-[#111625] border-[#1e293b] text-slate-400 hover:border-slate-700'
+                ? 'bg-[#2a1f16] border-[#c59b27] text-white shadow-md'
+                : 'bg-[#1c1611] border-[#2c2016] text-slate-400 hover:border-slate-700'
             }`}
           >
-            <div className={`p-2 rounded-lg ${activeSubTab === 'upvotes' ? 'bg-[#FF4500] text-white' : 'bg-slate-800'}`}>
+            <div className={`p-2 rounded-lg ${activeSubTab === 'upvotes' ? 'bg-[#c59b27] text-white' : 'bg-slate-800'}`}>
               <Flame size={16} />
             </div>
             <div>
@@ -158,11 +158,11 @@ export default function BoostView({ onAddToCart, onNavigateToCart }: BoostViewPr
             onClick={() => setActiveSubTab('comments')}
             className={`w-full flex items-center gap-3.5 p-4 rounded-xl border text-left transition-all ${
               activeSubTab === 'comments'
-                ? 'bg-[#1b253b] border-[#FF4500] text-white shadow-md'
-                : 'bg-[#111625] border-[#1e293b] text-slate-400 hover:border-slate-700'
+                ? 'bg-[#2a1f16] border-[#c59b27] text-white shadow-md'
+                : 'bg-[#1c1611] border-[#2c2016] text-slate-400 hover:border-slate-700'
             }`}
           >
-            <div className={`p-2 rounded-lg ${activeSubTab === 'comments' ? 'bg-[#FF4500] text-white' : 'bg-slate-800'}`}>
+            <div className={`p-2 rounded-lg ${activeSubTab === 'comments' ? 'bg-[#c59b27] text-white' : 'bg-slate-800'}`}>
               <MessageSquare size={16} />
             </div>
             <div>
@@ -175,11 +175,11 @@ export default function BoostView({ onAddToCart, onNavigateToCart }: BoostViewPr
             onClick={() => setActiveSubTab('posts')}
             className={`w-full flex items-center gap-3.5 p-4 rounded-xl border text-left transition-all ${
               activeSubTab === 'posts'
-                ? 'bg-[#1b253b] border-[#FF4500] text-white shadow-md'
-                : 'bg-[#111625] border-[#1e293b] text-slate-400 hover:border-slate-700'
+                ? 'bg-[#2a1f16] border-[#c59b27] text-white shadow-md'
+                : 'bg-[#1c1611] border-[#2c2016] text-slate-400 hover:border-slate-700'
             }`}
           >
-            <div className={`p-2 rounded-lg ${activeSubTab === 'posts' ? 'bg-[#FF4500] text-white' : 'bg-slate-800'}`}>
+            <div className={`p-2 rounded-lg ${activeSubTab === 'posts' ? 'bg-[#c59b27] text-white' : 'bg-slate-800'}`}>
               <PlusCircle size={16} />
             </div>
             <div>
@@ -189,21 +189,21 @@ export default function BoostView({ onAddToCart, onNavigateToCart }: BoostViewPr
           </button>
 
           {/* Guarantee info panel */}
-          <div className="bg-[#111625] border border-[#1e293b] rounded-xl p-4 text-xs space-y-3">
+          <div className="bg-[#1c1611] border border-[#2c2016] rounded-xl p-4 text-xs space-y-3">
             <span className="font-semibold text-slate-300 block font-mono text-[10px] uppercase">Campaign Protocols</span>
             <div className="flex items-start gap-2 text-slate-400 leading-relaxed">
               <ShieldCheck size={14} className="text-emerald-500 shrink-0 mt-0.5" />
               <span>Full anti-ghosting delivery algorithm. Real IP proxies are utilized to ensure upvotes register securely with zero drops.</span>
             </div>
             <div className="flex items-start gap-2 text-slate-400 leading-relaxed">
-              <Zap size={14} className="text-[#FFB000] shrink-0 mt-0.5" />
+              <Zap size={14} className="text-[#dfba6b] shrink-0 mt-0.5" />
               <span>Gradual organic drip distribution defaults to protect post thread history. Delivery starts in 15-30 minutes.</span>
             </div>
           </div>
         </div>
 
         {/* Form controls config panel */}
-        <div className="lg:col-span-8 bg-[#111625] rounded-2xl border border-[#1e293b] p-6 sm:p-8 shadow-md">
+        <div className="lg:col-span-8 bg-[#1c1611] rounded-2xl border border-[#2c2016] p-6 sm:p-8 shadow-md">
           {activeSubTab === 'upvotes' && (
             <form onSubmit={handleAddUpvotesToCart} className="space-y-6">
               <div className="pb-3 border-b border-slate-800">
@@ -221,14 +221,14 @@ export default function BoostView({ onAddToCart, onNavigateToCart }: BoostViewPr
                   placeholder="https://www.reddit.com/r/technology/comments/..."
                   value={targetUrl}
                   onChange={(e) => setTargetUrl(e.target.value)}
-                  className="w-full px-3.5 py-2.5 bg-[#0d121f] border border-[#1e293b] rounded-xl text-white text-sm focus:outline-none focus:border-[#FF4500]"
+                  className="w-full px-3.5 py-2.5 bg-[#0f0b08] border border-[#2c2016] rounded-xl text-white text-sm focus:outline-none focus:border-[#c59b27]"
                 />
               </div>
 
               <div>
                 <div className="flex justify-between items-center mb-2 text-xs font-mono">
                   <span className="text-slate-400 uppercase">Upvotes Quantity</span>
-                  <span className="text-white bg-[#FF4500] px-2 py-0.5 rounded text-xs font-bold font-mono">
+                  <span className="text-white bg-[#c59b27] px-2 py-0.5 rounded text-xs font-bold font-mono">
                     {upvoteCount} Upvotes
                   </span>
                 </div>
@@ -239,7 +239,7 @@ export default function BoostView({ onAddToCart, onNavigateToCart }: BoostViewPr
                   step="10"
                   value={upvoteCount}
                   onChange={(e) => setUpvoteCount(Number(e.target.value))}
-                  className="w-full text-[#FF4500] h-1.5 bg-slate-800 rounded-lg cursor-pointer accent-[#FF4500]"
+                  className="w-full text-[#c59b27] h-1.5 bg-slate-800 rounded-lg cursor-pointer accent-[#c59b27]"
                 />
                 <div className="flex justify-between text-[10px] text-slate-500 font-mono mt-1.5 uppercase">
                   <span>20 upvotes</span>
@@ -247,17 +247,17 @@ export default function BoostView({ onAddToCart, onNavigateToCart }: BoostViewPr
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between p-4 rounded-xl bg-[#0d121f] border border-[#1e293b] gap-4">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between p-4 rounded-xl bg-[#0f0b08] border border-[#2c2016] gap-4">
                 <div className="flex flex-col">
                   <span className="text-[10px] font-mono text-slate-500 uppercase">Service Estimated value</span>
                   <div className="flex items-baseline gap-2 mt-0.5">
-                    <span className="text-xl font-bold text-[#FFB000] font-mono">${calculatedUpvotePrice.toFixed(2)}</span>
+                    <span className="text-xl font-bold text-[#dfba6b] font-mono">${calculatedUpvotePrice.toFixed(2)}</span>
                     <span className="text-xs text-slate-500 font-mono font-medium">(${upvoteUnitPrice.toFixed(2)} / unit)</span>
                   </div>
                 </div>
                 <button
                   type="submit"
-                  className="w-full sm:w-auto py-3 px-6 rounded-xl bg-[#FF4500] hover:bg-[#FF5722] text-white text-xs font-semibold shadow-md shadow-[#FF4500]/15 transition-all cursor-pointer"
+                  className="w-full sm:w-auto py-3 px-6 rounded-xl bg-[#c59b27] hover:bg-[#a87f18] text-white text-xs font-semibold shadow-md shadow-[#c59b27]/15 transition-all cursor-pointer"
                 >
                   Configure & Add to Cart
                 </button>
@@ -289,7 +289,7 @@ export default function BoostView({ onAddToCart, onNavigateToCart }: BoostViewPr
                   placeholder="https://www.reddit.com/r/cryptocurrency/comments/..."
                   value={targetUrl}
                   onChange={(e) => setTargetUrl(e.target.value)}
-                  className="w-full px-3.5 py-2.5 bg-[#0d121f] border border-[#1e293b] rounded-xl text-white text-sm focus:outline-none focus:border-[#FF4500]"
+                  className="w-full px-3.5 py-2.5 bg-[#0f0b08] border border-[#2c2016] rounded-xl text-white text-sm focus:outline-none focus:border-[#c59b27]"
                 />
               </div>
 
@@ -303,15 +303,15 @@ export default function BoostView({ onAddToCart, onNavigateToCart }: BoostViewPr
                   placeholder="This is an awesome coin launch! Aping in immediately.&#10;Incredible project, dev team is super active on tg."
                   value={commentsInput}
                   onChange={(e) => setCommentsInput(e.target.value)}
-                  className="w-full px-3.5 py-2.5 bg-[#0d121f] border border-[#1e293b] rounded-xl text-white text-sm focus:outline-none focus:border-[#FF4500] placeholder:text-slate-600 resize-none font-mono text-xs"
+                  className="w-full px-3.5 py-2.5 bg-[#0f0b08] border border-[#2c2016] rounded-xl text-white text-sm focus:outline-none focus:border-[#c59b27] placeholder:text-slate-600 resize-none font-mono text-xs"
                 ></textarea>
               </div>
 
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between p-4 rounded-xl bg-[#0d121f] border border-[#1e293b] gap-4">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between p-4 rounded-xl bg-[#0f0b08] border border-[#2c2016] gap-4">
                 <div className="flex flex-col">
                   <span className="text-[10px] font-mono text-slate-500 uppercase">Estimated campaign total</span>
                   <div className="flex items-baseline gap-2 mt-0.5">
-                    <span className="text-xl font-bold text-[#FFB000] font-mono">
+                    <span className="text-xl font-bold text-[#dfba6b] font-mono">
                       ${(commentsInput.split('\n').filter(line => line.trim().length > 0).length * 2.50).toFixed(2)}
                     </span>
                     <span className="text-xs text-slate-500 font-mono font-medium">($2.50 / custom written comment)</span>
@@ -319,7 +319,7 @@ export default function BoostView({ onAddToCart, onNavigateToCart }: BoostViewPr
                 </div>
                 <button
                   type="submit"
-                  className="w-full sm:w-auto py-3 px-6 rounded-xl bg-[#FF4500] hover:bg-[#FF5722] text-white text-xs font-semibold shadow-md shadow-[#FF4500]/15 transition-all cursor-pointer"
+                  className="w-full sm:w-auto py-3 px-6 rounded-xl bg-[#c59b27] hover:bg-[#a87f18] text-white text-xs font-semibold shadow-md shadow-[#c59b27]/15 transition-all cursor-pointer"
                 >
                   Configure & Add to Cart
                 </button>
@@ -345,7 +345,7 @@ export default function BoostView({ onAddToCart, onNavigateToCart }: BoostViewPr
                     placeholder="e.g., Best way to audit smart contracts in 2026"
                     value={customTitle}
                     onChange={(e) => setCustomTitle(e.target.value)}
-                    className="w-full px-3.5 py-2.5 bg-[#0d121f] border border-[#1e293b] rounded-xl text-white text-sm focus:outline-none focus:border-[#FF4500]"
+                    className="w-full px-3.5 py-2.5 bg-[#0f0b08] border border-[#2c2016] rounded-xl text-white text-sm focus:outline-none focus:border-[#c59b27]"
                   />
                 </div>
 
@@ -356,7 +356,7 @@ export default function BoostView({ onAddToCart, onNavigateToCart }: BoostViewPr
                   <select
                     value={customNiche}
                     onChange={(e) => setCustomNiche(e.target.value)}
-                    className="w-full px-3.5 py-2.5 bg-[#0d121f] border border-[#1e293b] rounded-xl text-white text-sm focus:outline-none focus:border-[#FF4500]"
+                    className="w-full px-3.5 py-2.5 bg-[#0f0b08] border border-[#2c2016] rounded-xl text-white text-sm focus:outline-none focus:border-[#c59b27]"
                   >
                     <option value="tech">Crypto / Web3 / Tech niches</option>
                     <option value="saas">Software as a Service (SaaS)</option>
@@ -366,17 +366,17 @@ export default function BoostView({ onAddToCart, onNavigateToCart }: BoostViewPr
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between p-4 rounded-xl bg-[#0d121f] border border-[#1e293b] gap-4">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between p-4 rounded-xl bg-[#0f0b08] border border-[#2c2016] gap-4">
                 <div className="flex flex-col">
                   <span className="text-[10px] font-mono text-slate-500 uppercase">Fixed package value</span>
                   <div className="flex items-baseline gap-2 mt-0.5">
-                    <span className="text-xl font-bold text-[#FFB000] font-mono">$49.99</span>
+                    <span className="text-xl font-bold text-[#dfba6b] font-mono">$49.99</span>
                     <span className="text-xs text-slate-500 font-mono font-medium">(Includes copywriting, posting & anti-flag guarantee)</span>
                   </div>
                 </div>
                 <button
                   type="submit"
-                  className="w-full sm:w-auto py-3 px-6 rounded-xl bg-[#FF4500] hover:bg-[#FF5722] text-white text-xs font-semibold shadow-md shadow-[#FF4500]/15 transition-all cursor-pointer"
+                  className="w-full sm:w-auto py-3 px-6 rounded-xl bg-[#c59b27] hover:bg-[#a87f18] text-white text-xs font-semibold shadow-md shadow-[#c59b27]/15 transition-all cursor-pointer"
                 >
                   Configure & Add to Cart
                 </button>

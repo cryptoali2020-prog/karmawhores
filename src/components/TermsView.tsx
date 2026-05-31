@@ -11,7 +11,7 @@ export default function TermsView() {
     <div className="max-w-4xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
       {/* Header */}
       <div className="text-center mb-10 text-slate-350">
-        <span className="text-xs font-bold font-mono text-[#FF4500] uppercase tracking-widest bg-[#FF4500]/10 px-3 py-1 rounded-full border border-[#FF4500]/20">
+        <span className="text-xs font-bold font-mono text-[#c59b27] uppercase tracking-widest bg-[#c59b27]/10 px-3 py-1 rounded-full border border-[#c59b27]/20">
           Legal & Regulatory Agreement
         </span>
         <h2 className="text-3xl sm:text-4xl title-font font-bold text-white mt-3 mb-4 tracking-tight">
@@ -22,11 +22,11 @@ export default function TermsView() {
         </p>
       </div>
 
-      <div className="bg-[#111625] rounded-2xl border border-[#1e293b] p-6 sm:p-8 space-y-8 shadow-md">
+      <div className="bg-[#1c1611] rounded-2xl border border-[#2c2016] p-6 sm:p-8 space-y-8 shadow-md">
         {/* Term 1 */}
         <section className="space-y-3">
           <div className="flex items-center gap-2.5 text-white">
-            <Scale size={18} className="text-[#FF4500]" />
+            <Scale size={18} className="text-[#c59b27]" />
             <h3 className="text-base sm:text-lg font-display font-bold">1. Agreement of Sale Parameters</h3>
           </div>
           <p className="text-xs sm:text-sm text-slate-300 leading-relaxed pl-7">
@@ -37,7 +37,7 @@ export default function TermsView() {
         {/* Term 2 */}
         <section className="space-y-3">
           <div className="flex items-center gap-2.5 text-white">
-            <ShieldAlert size={18} className="text-[#FFB000]" />
+            <ShieldAlert size={18} className="text-[#dfba6b]" />
             <h3 className="text-base sm:text-lg font-display font-bold">2. Anti-Ban Warranty & Hand-Over</h3>
           </div>
           <p className="text-xs sm:text-sm text-slate-300 leading-relaxed pl-7">

@@ -4,8 +4,9 @@
  */
 
 import { Product, BlogArticle, FaqItem } from './types';
+import redditProductIcon from './assets/images/reddit_product_icon_1780251390780.png';
 
-export const products: Product[] = [
+const initialProducts: Product[] = [
   {
     id: "prod-1",
     wpId: "2763",
@@ -283,6 +284,8 @@ export const products: Product[] = [
     tags: ["viral-giant", "97k-karma", "super-authority"]
   }
 ];
+
+export const products: Product[] = initialProducts.map(p => ({ ...p, image: redditProductIcon }));
 
 export const blogArticles: BlogArticle[] = [
   {

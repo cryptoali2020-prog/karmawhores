@@ -36,12 +36,12 @@ export default function Header({ activeTab, setActiveTab, cart, setIsCartOpen }:
   };
 
   return (
-    <header className="sticky top-0 z-40 bg-[#0d121f]/95 backdrop-blur-md border-b border-[#1e293b]">
+    <header className="sticky top-0 z-40 bg-[#130e0a]/95 backdrop-blur-md border-b border-[#2c2016]">
       {/* Top Banner Tagline */}
-      <div className="bg-[#111726] border-b border-[#1e293b] py-1.5 px-4 text-xs">
+      <div className="bg-[#1c1611] border-b border-[#2c2016] py-1.5 px-4 text-xs">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
           <div className="flex items-center gap-2 text-slate-400">
-            <span className="inline-block w-2 h-2 rounded-full bg-[#FF4500] animate-pulse"></span>
+            <span className="inline-block w-2 h-2 rounded-full bg-[#c59b27] animate-pulse"></span>
             <span>24/7 Support: London-based Customer Service & Full Refund Policy</span>
           </div>
           <div className="flex items-center gap-4">
@@ -55,7 +55,7 @@ export default function Header({ activeTab, setActiveTab, cart, setIsCartOpen }:
               <span>Facebook Page</span>
             </a>
             <span className="text-slate-600">|</span>
-            <span className="text-[#FFB000] font-medium">Guaranteed Delivery on Payment Cleared</span>
+            <span className="text-[#dfba6b] font-medium">Guaranteed Delivery on Payment Cleared</span>
           </div>
         </div>
       </div>
@@ -65,17 +65,17 @@ export default function Header({ activeTab, setActiveTab, cart, setIsCartOpen }:
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center cursor-pointer" onClick={() => handleNavClick('home')}>
-            <div className="relative flex items-center justify-center w-10 h-10 rounded-full bg-[#FF4500] shadow-lg shadow-[#FF4500]/20 mr-3">
+            <div className="relative flex items-center justify-center w-10 h-10 rounded-full bg-[#c59b27] shadow-lg shadow-[#c59b27]/20 mr-3">
               <span className="text-white font-bold text-xl title-font">K</span>
-              <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-[#FFB000] rounded-full border border-[#0d121f] flex items-center justify-center">
-                <span className="text-[9px] text-[#0d121f] font-extrabold">✓</span>
+              <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-[#dfba6b] rounded-full border border-[#130e0a] flex items-center justify-center">
+                <span className="text-[9px] text-[#130e0a] font-extrabold">✓</span>
               </div>
             </div>
             <div className="flex flex-col">
               <span className="font-display font-bold text-xl text-white tracking-tight flex items-center gap-1.5">
                 KarmaWhores
               </span>
-              <span className="text-[10px] text-[#FFB000] font-mono tracking-widest uppercase">Premium Assets</span>
+              <span className="text-[10px] text-[#dfba6b] font-mono tracking-widest uppercase">Premium Assets</span>
             </div>
           </div>
 
@@ -90,8 +90,8 @@ export default function Header({ activeTab, setActiveTab, cart, setIsCartOpen }:
                   onClick={() => handleNavClick(item.id)}
                   className={`flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium transition-all ${
                     isActive
-                      ? 'bg-[#FF4500]/10 text-[#FF4500] border-b-2 border-[#FF4500] rounded-b-none'
-                      : 'text-slate-400 hover:bg-[#162035] hover:text-white'
+                      ? 'bg-[#c59b27]/10 text-[#c59b27] border-b-2 border-[#c59b27] rounded-b-none'
+                      : 'text-slate-400 hover:bg-[#2a1f16] hover:text-white'
                   }`}
                 >
                   <Icon size={14} />
@@ -105,21 +105,21 @@ export default function Header({ activeTab, setActiveTab, cart, setIsCartOpen }:
           <div className="flex items-center gap-2">
             <button
               onClick={() => setIsCartOpen(true)}
-              className="relative p-2.5 rounded-xl bg-[#162035] hover:bg-[#1f2d4a] group transition-all duration-200 text-slate-200 border border-[#27314a]"
+              className="relative p-2.5 rounded-xl bg-[#2a1f16] hover:bg-[#382a1e] group transition-all duration-200 text-slate-200 border border-[#3d2f23]"
               title="Shopping Cart"
             >
-              <ShoppingCart size={18} className="group-hover:scale-110 transition-transform text-[#FFB000]" />
+              <ShoppingCart size={18} className="group-hover:scale-110 transition-transform text-[#dfba6b]" />
               {totalItems > 0 && (
-                <span className="absolute -top-1 -right-1 flex h-5 w-5 items-center justify-center rounded-full bg-[#FF4500] text-[10px] font-bold text-white ring-2 ring-[#0d121f] animate-bounce">
+                <span className="absolute -top-1 -right-1 flex h-5 w-5 items-center justify-center rounded-full bg-[#c59b27] text-[10px] font-bold text-white ring-2 ring-[#130e0a] animate-bounce">
                   {totalItems}
                 </span>
               )}
             </button>
 
             {/* Desktop Quick Total Indicator */}
-            <div className="hidden sm:flex flex-col text-right text-xs mr-1 bg-[#111726]/80 px-3 py-1.5 rounded-lg border border-[#1e293b]">
+            <div className="hidden sm:flex flex-col text-right text-xs mr-1 bg-[#1c1611]/80 px-3 py-1.5 rounded-lg border border-[#2c2016]">
               <span className="text-slate-500 font-mono">Cart Total</span>
-              <span className="text-white font-semibold font-mono text-[#FFB000]">
+              <span className="text-white font-semibold font-mono text-[#dfba6b]">
                 ${totalPrice.toFixed(2)}
               </span>
             </div>
@@ -127,10 +127,10 @@ export default function Header({ activeTab, setActiveTab, cart, setIsCartOpen }:
             {/* Responsive Responsive Mobile Burger Toggle */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden p-2 rounded-xl text-slate-400 hover:bg-[#162035] hover:text-white transition-colors"
+              className="md:hidden p-2 rounded-xl text-slate-400 hover:bg-[#2a1f16] hover:text-white transition-colors"
               aria-label="Toggle menu"
             >
-              {isMobileMenuOpen ? <X size={22} className="text-[#FF4500]" /> : <Menu size={22} />}
+              {isMobileMenuOpen ? <X size={22} className="text-[#c59b27]"  /> : <Menu size={22} />}
             </button>
           </div>
         </div>
@@ -138,7 +138,7 @@ export default function Header({ activeTab, setActiveTab, cart, setIsCartOpen }:
 
       {/* Mobile Menu Panel */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-[#0a0d17]/95 border-b border-[#1e293b] px-4 pt-2 pb-6 space-y-1">
+        <div className="md:hidden bg-[#0f0b08]/95 border-b border-[#2c2016] px-4 pt-2 pb-6 space-y-1">
           {navItems.map((item) => {
             const Icon = item.icon;
             const isActive = activeTab === item.id || (item.id === 'boost' && (activeTab === 'reddit-comments' || activeTab === 'buy-reddit-posts'));
@@ -148,8 +148,8 @@ export default function Header({ activeTab, setActiveTab, cart, setIsCartOpen }:
                 onClick={() => handleNavClick(item.id)}
                 className={`flex items-center gap-3 w-full px-4 py-3 rounded-xl text-base font-medium transition-all ${
                   isActive
-                    ? 'bg-[#FF4500]/15 text-[#FF4500] border-l-4 border-[#FF4500]'
-                    : 'text-slate-300 hover:bg-[#162035] hover:text-white'
+                    ? 'bg-[#c59b27]/15 text-[#c59b27] border-l-4 border-[#c59b27]'
+                    : 'text-slate-300 hover:bg-[#2a1f16] hover:text-white'
                 }`}
               >
                 <Icon size={18} />

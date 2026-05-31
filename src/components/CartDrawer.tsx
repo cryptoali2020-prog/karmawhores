@@ -102,12 +102,12 @@ export default function CartDrawer({
       <div className="absolute inset-0 bg-black/75 backdrop-blur-sm transition-opacity" onClick={onClose}></div>
 
       <div className="absolute inset-y-0 right-0 max-w-full flex pl-10">
-        <div className="w-screen max-w-md bg-[#0a0d16] border-l border-[#1e293b] flex flex-col shadow-2xl">
+        <div className="w-screen max-w-md bg-[#120e0a] border-l border-[#2c2016] flex flex-col shadow-2xl">
           {/* Header */}
-          <div className="px-5 py-4 border-b border-[#1e293b] flex items-center justify-between bg-[#111726]">
+          <div className="px-5 py-4 border-b border-[#2c2016] flex items-center justify-between bg-[#1c1611]">
             <h2 className="text-lg font-display font-semibold text-white flex items-center gap-2">
               <span>Shopping Cart</span>
-              <span className="text-xs px-2.5 py-0.5 rounded-full bg-[#FF4500] text-white font-mono font-bold">
+              <span className="text-xs px-2.5 py-0.5 rounded-full bg-[#c59b27] text-white font-mono font-bold">
                 {totalItems} items
               </span>
             </h2>
@@ -127,14 +127,14 @@ export default function CartDrawer({
                 Thank you for your order! Payment cleared successfully. Our automated delivery engine is dispatching secure instructions to <span className="text-white font-semibold">{emailAddress}</span>.
               </p>
               
-              <div className="w-full bg-[#111726] rounded-2xl p-5 border border-[#1e293b] text-left text-xs mb-8">
+              <div className="w-full bg-[#1c1611] rounded-2xl p-5 border border-[#2c2016] text-left text-xs mb-8">
                 <div className="font-semibold text-slate-400 uppercase tracking-wider mb-3 pb-2 border-b border-slate-800">
                   Transaction Receipt Details
                 </div>
                 <div className="space-y-2 font-mono">
                   <div className="flex justify-between">
                     <span className="text-slate-500">Invoice No:</span>
-                    <span className="text-[#FFB000]">KW-{Math.floor(100000 + Math.random() * 900000)}</span>
+                    <span className="text-[#dfba6b]">KW-{Math.floor(100000 + Math.random() * 900000)}</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-slate-500">Delivery Status:</span>
@@ -179,7 +179,7 @@ export default function CartDrawer({
                         value={fullName}
                         onChange={(e) => setFullName(e.target.value)}
                         placeholder="John Doe"
-                        className="w-full px-3 py-2 bg-[#111726] border border-[#1e293b] rounded-lg text-white text-sm focus:outline-none focus:border-[#FF4500]"
+                        className="w-full px-3 py-2 bg-[#1c1611] border border-[#2c2016] rounded-lg text-white text-sm focus:outline-none focus:border-[#c59b27]"
                       />
                       {errors.fullName && <p className="text-[11px] text-rose-500 mt-1">{errors.fullName}</p>}
                     </div>
@@ -192,7 +192,7 @@ export default function CartDrawer({
                         value={emailAddress}
                         onChange={(e) => setEmailAddress(e.target.value)}
                         placeholder="johndoe@example.com"
-                        className="w-full px-3 py-2 bg-[#111726] border border-[#1e293b] rounded-lg text-white text-sm focus:outline-none focus:border-[#FF4500]"
+                        className="w-full px-3 py-2 bg-[#1c1611] border border-[#2c2016] rounded-lg text-white text-sm focus:outline-none focus:border-[#c59b27]"
                       />
                       {errors.emailAddress && <p className="text-[11px] text-rose-500 mt-1">{errors.emailAddress}</p>}
                     </div>
@@ -205,7 +205,7 @@ export default function CartDrawer({
                           value={telegramId}
                           onChange={(e) => setTelegramId(e.target.value)}
                           placeholder="johndoe_tg"
-                          className="w-full px-3 py-2 bg-[#111726] border border-[#1e293b] rounded-lg text-white text-sm focus:outline-none focus:border-[#FF4500]"
+                          className="w-full px-3 py-2 bg-[#1c1611] border border-[#2c2016] rounded-lg text-white text-sm focus:outline-none focus:border-[#c59b27]"
                         />
                       </div>
                       <div>
@@ -215,7 +215,7 @@ export default function CartDrawer({
                           value={redditUsername}
                           onChange={(e) => setRedditUsername(e.target.value)}
                           placeholder="u/reddit_user"
-                          className="w-full px-3 py-2 bg-[#111726] border border-[#1e293b] rounded-lg text-white text-sm focus:outline-none focus:border-[#FF4500]"
+                          className="w-full px-3 py-2 bg-[#1c1611] border border-[#2c2016] rounded-lg text-white text-sm focus:outline-none focus:border-[#c59b27]"
                         />
                       </div>
                     </div>
@@ -232,8 +232,8 @@ export default function CartDrawer({
                       onClick={() => setSelectedPayment('cards')}
                       className={`flex flex-col items-center justify-center p-2.5 rounded-xl border-2 transition-all ${
                         selectedPayment === 'cards'
-                          ? 'bg-[#1b253b] border-[#FF4500] text-[#FF4500]'
-                          : 'bg-[#111726] border-[#1e293b] text-slate-400 hover:border-slate-700'
+                          ? 'bg-[#2a1f16] border-[#c59b27] text-[#c59b27]'
+                          : 'bg-[#1c1611] border-[#2c2016] text-[#dfba6b] hover:border-[#c59b27]'
                       }`}
                     >
                       <CreditCard size={18} className="mb-1" />
@@ -245,11 +245,11 @@ export default function CartDrawer({
                       onClick={() => setSelectedPayment('paypal')}
                       className={`flex flex-col items-center justify-center p-2.5 rounded-xl border-2 transition-all ${
                         selectedPayment === 'paypal'
-                          ? 'bg-[#003087]/20 border-[#0070ba] text-[#0070ba]'
-                          : 'bg-[#111726] border-[#1e293b] text-slate-400 hover:border-slate-700'
+                          ? 'bg-[#2a1f16] border-[#dfba6b] text-[#dfba6b]'
+                          : 'bg-[#1c1611] border-[#2c2016] text-slate-400 hover:border-slate-700'
                       }`}
                     >
-                      <span className="text-[13px] font-bold text-[#0070ba] mb-1 italic">PP</span>
+                      <span className="text-[13px] font-bold text-[#dfba6b] mb-1 italic">PP</span>
                       <span className="text-[10px] font-semibold font-mono tracking-tight leading-none">PayPal</span>
                     </button>
 
@@ -258,11 +258,11 @@ export default function CartDrawer({
                       onClick={() => setSelectedPayment('googlepay')}
                       className={`flex flex-col items-center justify-center p-2.5 rounded-xl border-2 transition-all ${
                         selectedPayment === 'googlepay'
-                          ? 'bg-slate-150 border-white text-white'
-                          : 'bg-[#111726] border-[#1e293b] text-slate-400 hover:border-slate-700'
+                          ? 'bg-[#2a1f16] border-white text-white'
+                          : 'bg-[#1c1611] border-[#2c2016] text-slate-400 hover:border-slate-750'
                       }`}
                     >
-                      <span className="text-xs font-extrabold text-white mb-1">G Pay</span>
+                      <span className="text-xs font-extrabold text-[#dfba6b] mb-1">G Pay</span>
                       <span className="text-[10px] font-semibold font-mono tracking-tight leading-none">Google</span>
                     </button>
 
@@ -271,8 +271,8 @@ export default function CartDrawer({
                       onClick={() => setSelectedPayment('applepay')}
                       className={`flex flex-col items-center justify-center p-2.5 rounded-xl border-2 transition-all ${
                         selectedPayment === 'applepay'
-                          ? 'bg-black border-[#27314a] text-white'
-                          : 'bg-[#111726] border-[#1e293b] text-slate-400 hover:border-slate-700'
+                          ? 'bg-[#2a1f16] border-[#c59b27] text-white'
+                          : 'bg-[#1c1611] border-[#2c2016] text-slate-400 hover:border-slate-750'
                       }`}
                     >
                       <Smartphone size={18} className="mb-1 text-white" />
@@ -281,10 +281,10 @@ export default function CartDrawer({
                   </div>
 
                   {/* Payment Panels Context */}
-                  <div className="bg-[#111726] border border-[#1e293b] rounded-2xl p-4.5">
+                  <div className="bg-[#1c1611] border border-[#2c2016] rounded-2xl p-4.5">
                     {selectedPayment === 'cards' && (
                       <div className="space-y-3.5">
-                        <div className="flex items-center justify-between text-xs text-slate-400 pb-2 border-b border-slate-800">
+                        <div className="flex items-center justify-between text-xs text-slate-400 pb-2 border-b border-slate-850">
                           <span>Secure Card Processing</span>
                           <Lock size={12} className="text-emerald-400 inline" />
                         </div>
@@ -295,7 +295,7 @@ export default function CartDrawer({
                             value={cardNumber}
                             onChange={(e) => setCardNumber(e.target.value)}
                             placeholder="4111 2222 3333 4444"
-                            className="w-full px-3 py-2 bg-[#090d16] border border-[#1e293b] rounded-lg text-white text-sm focus:outline-none"
+                            className="w-full px-3 py-2 bg-[#0f0b08] border border-[#2c2016] rounded-lg text-white text-sm focus:outline-none focus:border-[#c59b27]"
                           />
                           {errors.cardNumber && <p className="text-[11px] text-rose-500 mt-1">{errors.cardNumber}</p>}
                         </div>
@@ -307,7 +307,7 @@ export default function CartDrawer({
                               value={expiryDate}
                               placeholder="MM/YY"
                               onChange={(e) => setExpiryDate(e.target.value)}
-                              className="w-full px-3 py-2 bg-[#090d16] border border-[#1e293b] rounded-lg text-white text-sm focus:outline-none"
+                              className="w-full px-3 py-2 bg-[#0f0b08] border border-[#2c2016] rounded-lg text-white text-sm focus:outline-none focus:border-[#c59b27]"
                             />
                             {errors.expiryDate && <p className="text-[11px] text-rose-500 mt-1">{errors.expiryDate}</p>}
                           </div>
@@ -318,7 +318,7 @@ export default function CartDrawer({
                               value={cvv}
                               placeholder="123"
                               onChange={(e) => setCvv(e.target.value)}
-                              className="w-full px-3 py-2 bg-[#090d16] border border-[#1e293b] rounded-lg text-white text-sm focus:outline-none"
+                              className="w-full px-3 py-2 bg-[#0f0b08] border border-[#2c2016] rounded-lg text-white text-sm focus:outline-none focus:border-[#c59b27]"
                             />
                             {errors.cvv && <p className="text-[11px] text-rose-500 mt-1">{errors.cvv}</p>}
                           </div>
@@ -371,16 +371,16 @@ export default function CartDrawer({
               </div>
 
               {/* Steps footer controls */}
-              <div className="p-5 border-t border-[#1e293b] bg-[#111726]/70">
+              <div className="p-5 border-t border-[#2c2016] bg-[#1c1611]/70">
                 <div className="flex justify-between items-baseline mb-4 text-sm font-mono">
                   <span className="text-slate-400">Invoice Sum total:</span>
-                  <span className="text-xl font-bold text-[#FFB000]">${totalPrice.toFixed(2)}</span>
+                  <span className="text-xl font-bold text-[#dfba6b]">${totalPrice.toFixed(2)}</span>
                 </div>
 
                 {isCheckingOut ? (
                   <div className="space-y-2">
                     <div className="h-2 w-full bg-slate-800 rounded-full overflow-hidden">
-                      <div className="h-full bg-[#FF4500]" style={{ width: `${txProgress}%` }}></div>
+                      <div className="h-full bg-[#c59b27]" style={{ width: `${txProgress}%` }}></div>
                     </div>
                     <div className="flex justify-between text-xs font-mono text-slate-400">
                       <span>Verifying clearance...</span>
@@ -398,7 +398,7 @@ export default function CartDrawer({
                     </button>
                     <button
                       type="submit"
-                      className="py-3 px-4 rounded-xl bg-[#FF4500] hover:bg-[#FF5722] text-white transition-all text-sm font-semibold flex items-center justify-center gap-1 cursor-pointer"
+                      className="py-3 px-4 rounded-xl bg-[#c59b27] hover:bg-[#a87f18] text-white transition-all text-sm font-semibold flex items-center justify-center gap-1 cursor-pointer"
                     >
                       <span>Pay Now</span>
                       <ArrowRight size={14} />
@@ -420,7 +420,7 @@ export default function CartDrawer({
                     </p>
                     <button
                       onClick={onClose}
-                      className="mt-5 py-2 px-5 rounded-lg bg-[#162035] text-slate-300 hover:text-white border border-[#27314a] text-xs transition-colors"
+                      className="mt-5 py-2 px-5 rounded-lg bg-[#2a1f16] text-slate-300 hover:text-white border border-[#3d2f23] text-xs transition-colors"
                     >
                       Browse Digital Store
                     </button>
@@ -429,12 +429,12 @@ export default function CartDrawer({
                   cart.map((item) => {
                     const price = item.product.salePrice ?? item.product.originalPrice;
                     return (
-                      <div key={item.product.id} className="flex gap-3 p-3 rounded-xl bg-[#111726]/60 border border-[#1e293b] hover:border-slate-800 transition-colors">
+                      <div key={item.product.id} className="flex gap-3 p-3 rounded-xl bg-[#1c1611]/60 border border-[#2c2016] hover:border-slate-800 transition-colors">
                         <img
                           src={item.product.image}
                           alt={item.product.title}
                           referrerPolicy="no-referrer"
-                          className="w-16 h-16 rounded-lg object-cover bg-slate-900 border border-slate-800 shrink-0"
+                          className="w-16 h-16 rounded-lg object-cover bg-slate-900 border border-slate-850 shrink-0"
                         />
                         <div className="flex-1 flex flex-col min-w-0">
                           <h4 className="text-xs font-semibold text-white truncate pr-4" title={item.product.title}>
@@ -446,7 +446,7 @@ export default function CartDrawer({
                           
                           <div className="flex items-center justify-between mt-auto pt-1">
                             {/* Quantity buttons */}
-                            <div className="flex items-center gap-1.5 bg-[#090d16] p-1 rounded-lg border border-[#1e293b]">
+                            <div className="flex items-center gap-1.5 bg-[#0f0b08] p-1 rounded-lg border border-[#2c2016]">
                               <button
                                 onClick={() => onUpdateQuantity(item.product.id, Math.max(1, item.quantity - 1))}
                                 className="p-0.5 rounded text-slate-400 hover:text-white hover:bg-slate-850 transition-colors"
@@ -463,7 +463,7 @@ export default function CartDrawer({
                             </div>
 
                             <div className="text-right">
-                              <span className="text-xs font-bold text-[#FFB000] font-mono">
+                              <span className="text-xs font-bold text-[#dfba6b] font-mono">
                                 ${(price * item.quantity).toFixed(2)}
                               </span>
                             </div>
@@ -486,7 +486,7 @@ export default function CartDrawer({
 
               {/* Drawer footer summing block */}
               {cart.length > 0 && (
-                <div className="p-5 border-t border-[#1e293b] bg-[#111726] space-y-4">
+                <div className="p-5 border-t border-[#2c2016] bg-[#1c1611] space-y-4">
                   <div className="space-y-1.5 text-xs text-slate-400">
                     <div className="flex justify-between font-mono">
                       <span>Total items counts:</span>
@@ -496,15 +496,15 @@ export default function CartDrawer({
                       <span>Automated secure dispatch:</span>
                       <span className="text-emerald-400">FREE</span>
                     </div>
-                    <div className="flex justify-between text-base font-semibold pt-2 border-t border-slate-800 text-white font-mono">
+                    <div className="flex justify-between text-base font-semibold pt-2 border-t border-slate-850 text-white font-mono">
                       <span>Final Subtotal:</span>
-                      <span className="text-[#FFB000]">${totalPrice.toFixed(2)}</span>
+                      <span className="text-[#dfba6b]">${totalPrice.toFixed(2)}</span>
                     </div>
                   </div>
 
                   <button
                     onClick={() => setCheckoutStep(2)}
-                    className="w-full py-3 px-4 rounded-xl bg-[#FF4500] hover:bg-[#FF5722] text-white font-semibold transition-all text-sm flex items-center justify-center gap-1.5 shadow-lg shadow-[#FF4500]/25 hover:shadow-[#FF4500]/45 cursor-pointer"
+                    className="w-full py-3 px-4 rounded-xl bg-[#c59b27] hover:bg-[#a87f18] text-white font-semibold transition-all text-sm flex items-center justify-center gap-1.5 shadow-lg shadow-[#c59b27]/25 hover:shadow-[#c59b27]/45 cursor-pointer"
                   >
                     <span>Proceed to Secure Checkout</span>
                     <ArrowRight size={14} />

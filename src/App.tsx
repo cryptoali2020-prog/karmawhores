@@ -122,7 +122,7 @@ export default function App() {
   });
 
   return (
-    <div className="min-h-screen bg-[#070a13] flex flex-col selection:bg-[#FF4500] selection:text-white">
+    <div className="min-h-screen bg-[#120e0a] flex flex-col selection:bg-[#c59b27] selection:text-white">
       {/* Navigation Header */}
       <Header 
         activeTab={activeTab} 
@@ -136,17 +136,17 @@ export default function App() {
         {activeTab === 'home' && (
           <div>
             {/* HERO BADGE HEADER */}
-            <section className="relative overflow-hidden pt-12 pb-14 bg-gradient-to-b from-[#111726] to-[#070a13] border-b border-[#131b2e]">
-              <div className="absolute inset-0 bg-radial-gradient from-[#FF4500]/10 via-transparent to-transparent opacity-40"></div>
+            <section className="relative overflow-hidden pt-12 pb-14 bg-gradient-to-b from-[#1c1611] to-[#120e0a] border-b border-[#2c2016]">
+              <div className="absolute inset-0 bg-radial-gradient from-[#c59b27]/10 via-transparent to-transparent opacity-40"></div>
               
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FF4500]/10 border border-[#FF4500]/20 text-xs text-[#FF4500] font-mono font-bold uppercase tracking-wider mb-6 animate-pulse">
-                  <Sparkles size={13} className="text-[#FFB000]" />
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#c59b27]/10 border border-[#c59b27]/20 text-xs text-[#c59b27] font-mono font-bold uppercase tracking-wider mb-6 animate-pulse">
+                  <Sparkles size={13} className="text-[#dfba6b]" />
                   <span>Verified Aged Reputation Marketplace</span>
                 </div>
 
                 <h1 className="text-3xl sm:text-5xl title-font font-bold text-white tracking-tight leading-none mb-4 max-w-4xl mx-auto">
-                  Buy High Karma <span className="text-[#FF4500]">Reddit Accounts</span> & Post Upvotes
+                  Buy High Karma <span className="text-[#c59b27]">Reddit Accounts</span> & Post Upvotes
                 </h1>
                 
                 <p className="text-sm sm:text-base text-slate-400 max-w-2xl mx-auto leading-relaxed mb-8">
@@ -155,28 +155,28 @@ export default function App() {
 
                 {/* Grid features info */}
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto text-left">
-                  <div className="p-4 bg-[#111726]/60 rounded-xl border border-[#1e293b] flex items-center gap-3">
+                  <div className="p-4 bg-[#1c1611]/60 rounded-xl border border-[#2c2016] flex items-center gap-3">
                     <span className="text-xl">🛡️</span>
                     <div>
                       <h4 className="text-xs font-bold text-white font-mono uppercase tracking-wide">100% Unbanned</h4>
                       <p className="text-[11px] text-slate-500">Residential IP proxies</p>
                     </div>
                   </div>
-                  <div className="p-4 bg-[#111726]/60 rounded-xl border border-[#1e293b] flex items-center gap-3">
+                  <div className="p-4 bg-[#1c1611]/60 rounded-xl border border-[#2c2016] flex items-center gap-3">
                     <span className="text-xl">✈️</span>
                     <div>
                       <h4 className="text-xs font-bold text-white font-mono uppercase tracking-wide">Instant Dispatch</h4>
                       <p className="text-[11px] text-slate-500">Automated secure node</p>
                     </div>
                   </div>
-                  <div className="p-4 bg-[#111726]/60 rounded-xl border border-[#1e293b] flex items-center gap-3">
+                  <div className="p-4 bg-[#1c1611]/60 rounded-xl border border-[#2c2016] flex items-center gap-3">
                     <span className="text-xl">💳</span>
                     <div>
                       <h4 className="text-xs font-bold text-white font-mono uppercase tracking-wide">4 Payment Types</h4>
                       <p className="text-[11px] text-slate-500">Paypal, Card, G-Pay, Apple</p>
                     </div>
                   </div>
-                  <div className="p-4 bg-[#111726]/60 rounded-xl border border-[#1e293b] flex items-center gap-3">
+                  <div className="p-4 bg-[#1c1611]/60 rounded-xl border border-[#2c2016] flex items-center gap-3">
                     <span className="text-xl">🇬🇧</span>
                     <div>
                       <h4 className="text-xs font-bold text-white font-mono uppercase tracking-wide">London Support</h4>
@@ -190,10 +190,10 @@ export default function App() {
             {/* PRODUCT CATALOG WORKSPACE */}
             <section className="max-w-7xl mx-auto px-4 mt-12 sm:px-6 lg:px-8">
               {/* Filter controls panel bar */}
-              <div className="bg-[#111625] rounded-2xl border border-[#1e293b] p-5 mb-8 shadow-sm">
-                <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4 pb-4 border-b border-[#1e293b]">
+              <div className="bg-[#1c1611] rounded-2xl border border-[#2c2016] p-5 mb-8 shadow-sm">
+                <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4 pb-4 border-b border-[#2c2016]">
                   <h3 className="text-base font-display font-bold text-white flex items-center gap-2">
-                    <SlidersHorizontal size={16} className="text-[#FF4500]" />
+                    <SlidersHorizontal size={16} className="text-[#c59b27]" />
                     <span>Digital Asset Catalog Filters</span>
                   </h3>
                   
@@ -211,8 +211,8 @@ export default function App() {
                         onClick={() => setSelectedCategory(cat.id)}
                         className={`px-3 py-1.5 rounded-lg border transition-all cursor-pointer ${
                           selectedCategory === cat.id
-                            ? 'bg-[#FF4500] border-[#FF4500] text-white text-semibold'
-                            : 'bg-[#0d121f] border-slate-800 text-slate-400 hover:text-white'
+                            ? 'bg-[#c59b27] border-[#c59b27] text-white text-semibold'
+                            : 'bg-[#0f0b08] border-[#2c2016] text-slate-400 hover:text-white'
                         }`}
                       >
                         {cat.label}
@@ -229,7 +229,7 @@ export default function App() {
                       placeholder="Search accounts (e.g. age, karma, wp ID)..."
                       value={searchTerm}
                       onChange={(e) => setSearchTerm(e.target.value)}
-                      className="w-full px-3.5 py-2 bg-[#0d121f] border border-[#1e293b] rounded-xl text-white text-sm focus:outline-none focus:border-[#FF4500] pl-10"
+                      className="w-full px-3.5 py-2 bg-[#0f0b08] border border-[#2c2016] rounded-xl text-white text-sm focus:outline-none focus:border-[#c59b27] pl-10"
                     />
                     <Search size={14} className="absolute left-3.5 top-3 text-slate-500" />
                   </div>
@@ -244,9 +244,9 @@ export default function App() {
                       step="5"
                       value={priceRange}
                       onChange={(e) => setPriceRange(Number(e.target.value))}
-                      className="w-full h-1 bg-[#1e293b] rounded-lg cursor-pointer accent-[#FF4500]"
+                      className="w-full h-1 bg-[#2c2016] rounded-lg cursor-pointer accent-[#c59b27]"
                     />
-                    <span className="text-xs text-[#FFB000] font-mono font-bold shrink-0 min-w-[50px] text-right">
+                    <span className="text-xs text-[#dfba6b] font-mono font-bold shrink-0 min-w-[50px] text-right">
                       ${priceRange}
                     </span>
                   </div>
@@ -256,7 +256,7 @@ export default function App() {
                     <select
                       value={sortBy}
                       onChange={(e) => setSortBy(e.target.value)}
-                      className="w-full px-3 py-2 bg-[#0d121f] border border-[#1e293b] rounded-xl text-slate-300 text-xs focus:outline-none"
+                      className="w-full px-3 py-2 bg-[#0f0b08] border border-[#2c2016] rounded-xl text-slate-300 text-xs focus:outline-none"
                     >
                       <option value="default">Default sorting</option>
                       <option value="popularity">Sort by popularity</option>
@@ -269,7 +269,7 @@ export default function App() {
 
               {/* Grid listings render */}
               {filteredProducts.length === 0 ? (
-                <div className="text-center py-24 bg-[#111625] rounded-3xl border border-dashed border-slate-800">
+                <div className="text-center py-24 bg-[#1c1611] rounded-3xl border border-dashed border-slate-800">
                   <span className="text-5xl inline-block mb-3">🔍</span>
                   <p className="text-slate-400 font-medium">No digital store assets match your filter parameters.</p>
                   <button
@@ -278,7 +278,7 @@ export default function App() {
                       setSelectedCategory('all');
                       setPriceRange(1000);
                     }}
-                    className="mt-4 px-4 py-2 bg-[#162035] hover:bg-[#1a2640] border border-[#27314a] text-[#FF4500] rounded-xl text-xs font-mono font-bold uppercase transition-all"
+                    className="mt-4 px-4 py-2 bg-[#2a1f16] hover:bg-[#382a1e] border border-[#3d2f23] text-[#c59b27] rounded-xl text-xs font-mono font-bold uppercase transition-all"
                   >
                     Clear All Filters
                   </button>
@@ -323,13 +323,13 @@ export default function App() {
       </main>
 
       {/* FOOTER SIDEBAR AND REPLICA STORE CREDITS */}
-      <footer id="colophon" className="bg-[#0b0f19] border-t border-[#131b2c] py-12 text-slate-400 text-xs">
+      <footer id="colophon" className="bg-[#0f0b08] border-t border-[#2c2016] py-12 text-slate-400 text-xs">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
           
           {/* Col 1: Bio */}
           <div className="space-y-4">
             <div className="flex items-center">
-              <div className="relative flex items-center justify-center w-8 h-8 rounded-full bg-[#FF4500] shadow-md shadow-[#FF4500]/10 mr-2.5">
+              <div className="relative flex items-center justify-center w-8 h-8 rounded-full bg-[#c59b27] shadow-md shadow-[#c59b27]/10 mr-2.5">
                 <span className="text-white font-bold text-base title-font">K</span>
               </div>
               <span className="font-display font-semibold text-white text-base">KarmaWhores</span>
@@ -338,7 +338,7 @@ export default function App() {
               24/7 support London-based customer service, Reddit accounts upvote and downvotes, Reddit multi-task campaigns with full refund policy.
             </p>
             <div className="flex gap-2">
-              <span className="bg-[#111726] border border-slate-800 rounded px-2.5 py-1 text-[10px] font-mono text-[#FFB000]">
+              <span className="bg-[#1c1611] border border-[#2c2016] rounded px-2.5 py-1 text-[10px] font-mono text-[#dfba6b]">
                 Est. London 2018
               </span>
             </div>
@@ -349,22 +349,22 @@ export default function App() {
             <h4 className="text-white font-display font-bold text-xs uppercase tracking-wider mb-4">Marketplace Segments</h4>
             <ul className="space-y-2.5 font-mono text-[11px]">
               <li>
-                <button onClick={() => { setActiveTab('home'); setSelectedCategory('reddit-accounts'); }} className="hover:text-[#FF4500] text-slate-500 transition-colors">
+                <button onClick={() => { setActiveTab('home'); setSelectedCategory('reddit-accounts'); }} className="hover:text-[#c59b27] text-slate-500 transition-colors">
                   Aged Reddit Accounts
                 </button>
               </li>
               <li>
-                <button onClick={() => { setActiveTab('boost'); }} className="hover:text-[#FF4500] text-slate-500 transition-colors">
+                <button onClick={() => { setActiveTab('boost'); }} className="hover:text-[#c59b27] text-slate-500 transition-colors">
                   Reddit Upvotes & Seeding
                 </button>
               </li>
               <li>
-                <button onClick={() => { setActiveTab('home'); setSelectedCategory('reddit-comments'); }} className="hover:text-[#FF4500] text-slate-500 transition-colors">
+                <button onClick={() => { setActiveTab('home'); setSelectedCategory('reddit-comments'); }} className="hover:text-[#c59b27] text-slate-500 transition-colors">
                   Buy Custom Reddit Comments
                 </button>
               </li>
               <li>
-                <button onClick={() => { setActiveTab('home'); setSelectedCategory('guides'); }} className="hover:text-[#FF4500] text-slate-500 transition-colors">
+                <button onClick={() => { setActiveTab('home'); setSelectedCategory('guides'); }} className="hover:text-[#c59b27] text-slate-500 transition-colors">
                   Reddit Marketing Guide
                 </button>
               </li>
@@ -376,22 +376,22 @@ export default function App() {
             <h4 className="text-white font-display font-bold text-xs uppercase tracking-wider mb-4">Direct Navigation</h4>
             <ul className="space-y-2.5 font-mono text-[11px]">
               <li>
-                <button onClick={() => { setActiveTab('blog'); }} className="hover:text-[#FFB000] text-slate-500 transition-colors">
+                <button onClick={() => { setActiveTab('blog'); }} className="hover:text-[#dfba6b] text-slate-500 transition-colors">
                   Strategic Marketing Blog
                 </button>
               </li>
               <li>
-                <button onClick={() => { setActiveTab('faqs'); }} className="hover:text-[#FFB000] text-slate-400 transition-colors">
+                <button onClick={() => { setActiveTab('faqs'); }} className="hover:text-[#dfba6b] text-slate-400 transition-colors">
                   Frequently Asked Questions
                 </button>
               </li>
               <li>
-                <button onClick={() => { setActiveTab('terms'); }} className="hover:text-[#FFB000] text-slate-400 transition-colors">
+                <button onClick={() => { setActiveTab('terms'); }} className="hover:text-[#dfba6b] text-slate-400 transition-colors">
                   Terms of Service (66-2)
                 </button>
               </li>
               <li>
-                <button onClick={() => { setActiveTab('contact'); }} className="hover:text-[#FF4500] text-slate-400 transition-colors">
+                <button onClick={() => { setActiveTab('contact'); }} className="hover:text-[#c59b27] text-slate-400 transition-colors">
                   Open Support Hub Ticket
                 </button>
               </li>
@@ -404,23 +404,23 @@ export default function App() {
             <p className="text-slate-500 leading-relaxed text-[11px]">
               We facilitate automated hand-overs immediately following financial transaction clearance. Supported methods:
             </p>
-            <div className="grid grid-cols-2 gap-1.5 font-mono text-[10px] text-[#FFB000] font-semibold uppercase">
-              <span className="p-1.5 bg-[#111726] border border-slate-800 rounded text-center">PayPal</span>
-              <span className="p-1.5 bg-[#111726] border border-slate-800 rounded text-center">Google Pay</span>
-              <span className="p-1.5 bg-[#111726] border border-slate-800 rounded text-center">Visa / Card</span>
-              <span className="p-1.5 bg-[#111726] border border-slate-800 rounded text-center">Apple Pay</span>
+            <div className="grid grid-cols-2 gap-1.5 font-mono text-[10px] text-[#dfba6b] font-semibold uppercase">
+              <span className="p-1.5 bg-[#1c1611] border border-slate-800 rounded text-center">PayPal</span>
+              <span className="p-1.5 bg-[#1c1611] border border-slate-800 rounded text-center">Google Pay</span>
+              <span className="p-1.5 bg-[#1c1611] border border-slate-800 rounded text-center">Visa / Card</span>
+              <span className="p-1.5 bg-[#1c1611] border border-slate-800 rounded text-center">Apple Pay</span>
             </div>
           </div>
         </div>
 
         {/* Replica Store Copyrights block */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 mt-8 border-t border-[#131b2c] flex flex-col sm:flex-row justify-between items-center gap-4 text-[11px] text-slate-600">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 mt-8 border-t border-[#2c2016] flex flex-col sm:flex-row justify-between items-center gap-4 text-[11px] text-slate-600">
           <div>
             &copy; 2026 Buy Reddit accounts High karma and upvotes. All Rights Reserved.
           </div>
           <div className="flex items-center gap-1">
             <span>Powered by</span>
-            <a href="https://inkhive.com/product/store/" target="_blank" rel="noreferrer" className="text-slate-500 hover:text-slate-400 transition-colors underline bg-[#111726] px-1.5 py-0.5 rounded border border-slate-800">
+            <a href="https://inkhive.com/product/store/" target="_blank" rel="noreferrer" className="text-slate-500 hover:text-slate-400 transition-colors underline bg-[#1c1611] px-1.5 py-0.5 rounded border border-slate-800">
               Store Theme
             </a>
           </div>

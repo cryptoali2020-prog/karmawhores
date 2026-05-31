@@ -25,9 +25,9 @@ export default function ProductCard({ product, onAddToCart, onViewDetails }: Pro
   const getCategoryBadge = () => {
     switch (product.category) {
       case 'reddit-accounts':
-        return <span className="bg-[#FF4500]/10 text-[#FF4500] text-[10px] uppercase tracking-wider font-mono font-bold px-2 py-1 rounded-md border border-[#FF4500]/20">Reddit Account</span>;
+        return <span className="bg-[#c59b27]/10 text-[#c59b27] text-[10px] uppercase tracking-wider font-mono font-bold px-2 py-1 rounded-md border border-[#c59b27]/20">Reddit Account</span>;
       case 'reddit-posts':
-        return <span className="bg-[#FFB000]/10 text-[#FFB000] text-[10px] uppercase tracking-wider font-mono font-bold px-2 py-1 rounded-md border border-[#FFB000]/20">Reddit Posts</span>;
+        return <span className="bg-[#dfba6b]/10 text-[#dfba6b] text-[10px] uppercase tracking-wider font-mono font-bold px-2 py-1 rounded-md border border-[#dfba6b]/20">Reddit Posts</span>;
       case 'reddit-comments':
         return <span className="bg-indigo-500/10 text-indigo-400 text-[10px] uppercase tracking-wider font-mono font-bold px-2 py-1 rounded-md border border-indigo-500/20">Reddit Comments</span>;
       case 'guides':
@@ -38,12 +38,12 @@ export default function ProductCard({ product, onAddToCart, onViewDetails }: Pro
   };
 
   return (
-    <div className={`relative flex flex-col bg-[#111625] rounded-2xl overflow-hidden border ${product.isOutOfStock ? 'border-dashed border-slate-700 opacity-75' : 'border-[#1e293b] hover:border-[#FF4500]/40'} transition-all duration-300 group shadow-md shadow-black/10`}>
+    <div className={`relative flex flex-col bg-[#1c1611] rounded-2xl overflow-hidden border ${product.isOutOfStock ? 'border-dashed border-slate-700 opacity-75' : 'border-[#2c2016] hover:border-[#c59b27]/40'} transition-all duration-300 group shadow-md shadow-black/10`}>
       {/* Discount / Category Badges overlay */}
       <div className="absolute top-3 left-3 z-10 flex flex-col gap-1.5 items-start">
         {getCategoryBadge()}
         {isSale && !product.isOutOfStock && (
-          <span className="bg-[#FF4500] text-white text-xs font-bold font-mono px-2 py-0.5 rounded-md shadow-sm">
+          <span className="bg-[#c59b27] text-white text-xs font-bold font-mono px-2 py-0.5 rounded-md shadow-sm">
             {discountPercent}% OFF
           </span>
         )}
@@ -57,7 +57,7 @@ export default function ProductCard({ product, onAddToCart, onViewDetails }: Pro
           referrerPolicy="no-referrer"
           className="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-500"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#111625] to-transparent opacity-60"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-[#1c1611] to-transparent opacity-60"></div>
         
         {/* Out of stock banner overlay */}
         {product.isOutOfStock && (
@@ -71,29 +71,29 @@ export default function ProductCard({ product, onAddToCart, onViewDetails }: Pro
 
       {/* Main Contents description */}
       <div className="flex flex-col flex-1 p-5">
-        <h3 className="title-font font-semibold text-white group-hover:text-[#FF4500] transition-colors line-clamp-2 min-h-[2.5rem] tracking-tight leading-snug text-base mb-2">
+        <h3 className="title-font font-semibold text-white group-hover:text-[#c59b27] transition-colors line-clamp-2 min-h-[2.5rem] tracking-tight leading-snug text-base mb-2">
           {product.title}
         </h3>
 
         {/* Detailed accounts metric bar if relevant */}
         {product.category === 'reddit-accounts' && (
-          <div className="grid grid-cols-3 gap-1.5 py-3.5 px-3 rounded-xl bg-[#0a0d18] border border-[#1b253b] mb-4 text-xs font-mono">
+          <div className="grid grid-cols-3 gap-1.5 py-3.5 px-3 rounded-xl bg-[#0f0b08] border border-[#2c2016] mb-4 text-xs font-mono">
             <div className="flex flex-col items-center text-center">
               <Calendar size={13} className="text-slate-400 mb-1" />
               <span className="text-[10px] text-slate-500 uppercase">Age</span>
               <span className="text-white font-medium text-[11px] truncate w-full">{product.age || 'N/A'}</span>
             </div>
-            <div className="flex flex-col items-center text-center border-x border-[#1e293b]">
-              <Award size={13} className="text-[#FFB000] mb-1" />
+            <div className="flex flex-col items-center text-center border-x border-[#2b1f15]">
+              <Award size={13} className="text-[#dfba6b] mb-1" />
               <span className="text-[10px] text-slate-500 uppercase">Post Karma</span>
-              <span className="text-white font-medium text-[11px] font-mono text-[#FFB000]">
+              <span className="text-white font-medium text-[11px] font-mono text-[#dfba6b]">
                 {product.postKarma?.toLocaleString() || '0'}
               </span>
             </div>
             <div className="flex flex-col items-center text-center">
-              <User size={13} className="text-[#38bdf8] mb-1" />
+              <User size={13} className="text-[#e2be75] mb-1" />
               <span className="text-[10px] text-slate-500 uppercase">Comment K</span>
-              <span className="text-white font-medium text-[11px] font-mono text-[#38bdf8]">
+              <span className="text-white font-medium text-[11px] font-mono text-[#e2be75]">
                 {product.commentKarma?.toLocaleString() || '0'}
               </span>
             </div>
@@ -102,8 +102,8 @@ export default function ProductCard({ product, onAddToCart, onViewDetails }: Pro
 
         {/* Static specifications if relevant */}
         {product.category !== 'reddit-accounts' && (
-          <div className="flex items-center gap-2 mb-4 text-xs font-medium bg-[#0a0d18] p-2.5 rounded-xl border border-[#1e283b] text-slate-400 font-mono">
-            <CheckCircle2 size={13} className="text-[#FF4500]" />
+          <div className="flex items-center gap-2 mb-4 text-xs font-medium bg-[#0f0b08] p-2.5 rounded-xl border border-[#2c2016] text-slate-400 font-mono">
+            <CheckCircle2 size={13} className="text-[#c59b27]" />
             <span>Instant & Automated Priority Delivery</span>
           </div>
         )}
@@ -116,7 +116,7 @@ export default function ProductCard({ product, onAddToCart, onViewDetails }: Pro
         {product.tags && product.tags.length > 0 && (
           <div className="flex flex-wrap gap-1.5 mb-5 mt-auto">
             {product.tags.map(tag => (
-              <span key={tag} className="text-[10px] font-mono px-2 py-0.5 roundedbg rounded-md bg-[#162035] text-slate-400 uppercase tracking-tight">
+              <span key={tag} className="text-[10px] font-mono px-2 py-0.5 roundedbg rounded-md bg-[#2a1f16] text-slate-400 uppercase tracking-tight">
                 #{tag}
               </span>
             ))}
@@ -124,11 +124,11 @@ export default function ProductCard({ product, onAddToCart, onViewDetails }: Pro
         )}
 
         {/* Pricing structure & transactional buttons */}
-        <div className="flex items-end justify-between pt-4 border-t border-[#1e293b] mt-auto">
+        <div className="flex items-end justify-between pt-4 border-t border-[#2c2016] mt-auto">
           <div className="flex flex-col">
             <span className="text-[10px] uppercase font-mono text-slate-500">Price Portfolio</span>
             <div className="flex items-baseline gap-2">
-              <span className="text-xl font-bold font-mono text-[#FFB000]">
+              <span className="text-xl font-bold font-mono text-[#dfba6b]">
                 ${finalPrice.toFixed(2)}
               </span>
               {isSale && (
@@ -145,7 +145,7 @@ export default function ProductCard({ product, onAddToCart, onViewDetails }: Pro
               href={product.link}
               target="_blank"
               rel="noreferrer"
-              className="p-2 rounded-xl text-slate-400 hover:text-white bg-[#162035] hover:bg-[#1a2640] border border-[#27314a] transition-all"
+              className="p-2 rounded-xl text-slate-400 hover:text-white bg-[#2a1f16] hover:bg-[#382a1e] border border-[#3d2f23] transition-all"
               title="Visit Original Store Link"
             >
               <ExternalLink size={15} />
@@ -154,7 +154,7 @@ export default function ProductCard({ product, onAddToCart, onViewDetails }: Pro
             {!product.isOutOfStock ? (
               <button
                 onClick={() => onAddToCart(product)}
-                className="flex items-center gap-1.5 py-2 px-3.5 rounded-xl bg-[#FF4500] hover:bg-[#FF5722] text-white text-xs font-semibold shadow-md shadow-[#FF4500]/15 hover:shadow-[#FF4500]/30 transition-all cursor-pointer"
+                className="flex items-center gap-1.5 py-2 px-3.5 rounded-xl bg-[#c59b27] hover:bg-[#a87f18] text-white text-xs font-semibold shadow-md shadow-[#c59b27]/15 hover:shadow-[#c59b27]/30 transition-all cursor-pointer"
               >
                 <ShoppingCart size={13} />
                 <span>Add to Cart</span>
