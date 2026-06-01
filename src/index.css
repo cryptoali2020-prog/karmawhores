@@ -5,16 +5,21 @@
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Space Grotesk", sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
-  --color-reddit-orange: #c59b27;
-  --color-reddit-hover: #a87f18;
-  --color-premium-gold: #dfba6b;
-  --color-slate-950: #0f0b08;
+  --color-brand-pink: #ec1c6d;
+  --color-brand-pink-hover: #d1125d;
+  --color-brand-brown-dark: #27140e;
+  --color-brand-brown-medium: #4c2f24;
+  --color-brand-beige: #dfd5bd;
+  --color-brand-beige-dark: #cfc2a2;
+  --color-brand-cream: #fbfaee;
+  --color-brand-card-bg: #fbfaee;
+  --color-brand-text-dark: #1f110c;
 }
 
 body {
   font-family: var(--font-sans);
-  background-color: #120e0a;
-  color: #e2e8f0;
+  background-color: #f0ebe0;
+  color: #27140e;
 }
 
 .title-font {
@@ -23,21 +28,21 @@ body {
 
 /* Custom fade scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 8px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #0f0b08;
+  background: #f0ebe0;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #3d2f23;
+  background: #4c2f24;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-reddit-orange);
+  background: var(--color-brand-pink);
 }
 
 @keyframes float {

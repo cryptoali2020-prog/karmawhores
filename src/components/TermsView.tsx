@@ -22,7 +22,7 @@ export default function TermsView() {
         </p>
       </div>
 
-      <div className="bg-[#1c1611] rounded-2xl border border-[#2c2016] p-6 sm:p-8 space-y-8 shadow-md">
+      <div className="bg-[#231a12] rounded-2xl border border-[#3d2b1c] p-6 sm:p-8 space-y-8 shadow-md">
         {/* Term 1 */}
         <section className="space-y-3">
           <div className="flex items-center gap-2.5 text-white">
@@ -68,7 +68,7 @@ export default function TermsView() {
         </section>
 
         {/* Footer meta info block */}
-        <div className="pt-6 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center gap-4 text-slate-500 font-mono text-[10px] sm:text-xs">
+        <div className="pt-6 border-t border-[#3d2b1c]/60 flex flex-col sm:flex-row justify-between items-center gap-4 text-slate-500 font-mono text-[10px] sm:text-xs">
           <div className="flex items-center gap-2">
             <FileText size={14} className="text-slate-400" />
             <span>Document ID: TOC-66-2-2026</span>

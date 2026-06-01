@@ -141,11 +141,11 @@ export default function BoostView({ onAddToCart, onNavigateToCart }: BoostViewPr
             onClick={() => setActiveSubTab('upvotes')}
             className={`w-full flex items-center gap-3.5 p-4 rounded-xl border text-left transition-all ${
               activeSubTab === 'upvotes'
-                ? 'bg-[#2a1f16] border-[#c59b27] text-white shadow-md'
-                : 'bg-[#1c1611] border-[#2c2016] text-slate-400 hover:border-slate-700'
+                ? 'bg-[#35261a] border-[#c59b27] text-white shadow-md'
+                : 'bg-[#231a12] border-[#3d2b1c] text-slate-400 hover:border-[#c59b27]/30'
             }`}
           >
-            <div className={`p-2 rounded-lg ${activeSubTab === 'upvotes' ? 'bg-[#c59b27] text-white' : 'bg-slate-800'}`}>
+            <div className={`p-2 rounded-lg ${activeSubTab === 'upvotes' ? 'bg-[#c59b27] text-white' : 'bg-[#110b07]'}`}>
               <Flame size={16} />
             </div>
             <div>
@@ -158,11 +158,11 @@ export default function BoostView({ onAddToCart, onNavigateToCart }: BoostViewPr
             onClick={() => setActiveSubTab('comments')}
             className={`w-full flex items-center gap-3.5 p-4 rounded-xl border text-left transition-all ${
               activeSubTab === 'comments'
-                ? 'bg-[#2a1f16] border-[#c59b27] text-white shadow-md'
-                : 'bg-[#1c1611] border-[#2c2016] text-slate-400 hover:border-slate-700'
+                ? 'bg-[#35261a] border-[#c59b27] text-white shadow-md'
+                : 'bg-[#231a12] border-[#3d2b1c] text-slate-400 hover:border-[#c59b27]/30'
             }`}
           >
-            <div className={`p-2 rounded-lg ${activeSubTab === 'comments' ? 'bg-[#c59b27] text-white' : 'bg-slate-800'}`}>
+            <div className={`p-2 rounded-lg ${activeSubTab === 'comments' ? 'bg-[#c59b27] text-white' : 'bg-[#110b07]'}`}>
               <MessageSquare size={16} />
             </div>
             <div>
@@ -175,11 +175,11 @@ export default function BoostView({ onAddToCart, onNavigateToCart }: BoostViewPr
             onClick={() => setActiveSubTab('posts')}
             className={`w-full flex items-center gap-3.5 p-4 rounded-xl border text-left transition-all ${
               activeSubTab === 'posts'
-                ? 'bg-[#2a1f16] border-[#c59b27] text-white shadow-md'
-                : 'bg-[#1c1611] border-[#2c2016] text-slate-400 hover:border-slate-700'
+                ? 'bg-[#35261a] border-[#c59b27] text-white shadow-md'
+                : 'bg-[#231a12] border-[#3d2b1c] text-slate-400 hover:border-[#c59b27]/30'
             }`}
           >
-            <div className={`p-2 rounded-lg ${activeSubTab === 'posts' ? 'bg-[#c59b27] text-white' : 'bg-slate-800'}`}>
+            <div className={`p-2 rounded-lg ${activeSubTab === 'posts' ? 'bg-[#c59b27] text-white' : 'bg-[#110b07]'}`}>
               <PlusCircle size={16} />
             </div>
             <div>
@@ -189,7 +189,7 @@ export default function BoostView({ onAddToCart, onNavigateToCart }: BoostViewPr
           </button>
 
           {/* Guarantee info panel */}
-          <div className="bg-[#1c1611] border border-[#2c2016] rounded-xl p-4 text-xs space-y-3">
+          <div className="bg-[#231a12] border border-[#3d2b1c] rounded-xl p-4 text-xs space-y-3">
             <span className="font-semibold text-slate-300 block font-mono text-[10px] uppercase">Campaign Protocols</span>
             <div className="flex items-start gap-2 text-slate-400 leading-relaxed">
               <ShieldCheck size={14} className="text-emerald-500 shrink-0 mt-0.5" />
@@ -203,7 +203,7 @@ export default function BoostView({ onAddToCart, onNavigateToCart }: BoostViewPr
         </div>
 
         {/* Form controls config panel */}
-        <div className="lg:col-span-8 bg-[#1c1611] rounded-2xl border border-[#2c2016] p-6 sm:p-8 shadow-md">
+        <div className="lg:col-span-8 bg-[#231a12] rounded-2xl border border-[#3d2b1c] p-6 sm:p-8 shadow-md">
           {activeSubTab === 'upvotes' && (
             <form onSubmit={handleAddUpvotesToCart} className="space-y-6">
               <div className="pb-3 border-b border-slate-800">
@@ -221,7 +221,7 @@ export default function BoostView({ onAddToCart, onNavigateToCart }: BoostViewPr
                   placeholder="https://www.reddit.com/r/technology/comments/..."
                   value={targetUrl}
                   onChange={(e) => setTargetUrl(e.target.value)}
-                  className="w-full px-3.5 py-2.5 bg-[#0f0b08] border border-[#2c2016] rounded-xl text-white text-sm focus:outline-none focus:border-[#c59b27]"
+                  className="w-full px-3.5 py-2.5 bg-[#110b07] border border-[#3d2b1c] rounded-xl text-white text-sm focus:outline-none focus:border-[#c59b27]"
                 />
               </div>
 
@@ -239,7 +239,7 @@ export default function BoostView({ onAddToCart, onNavigateToCart }: BoostViewPr
                   step="10"
                   value={upvoteCount}
                   onChange={(e) => setUpvoteCount(Number(e.target.value))}
-                  className="w-full text-[#c59b27] h-1.5 bg-slate-800 rounded-lg cursor-pointer accent-[#c59b27]"
+                  className="w-full text-[#c59b27] h-1.5 bg-[#3d2b1c] rounded-lg cursor-pointer accent-[#c59b27]"
                 />
                 <div className="flex justify-between text-[10px] text-slate-500 font-mono mt-1.5 uppercase">
                   <span>20 upvotes</span>
@@ -247,7 +247,7 @@ export default function BoostView({ onAddToCart, onNavigateToCart }: BoostViewPr
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between p-4 rounded-xl bg-[#0f0b08] border border-[#2c2016] gap-4">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between p-4 rounded-xl bg-[#110b07] border border-[#3d2b1c] gap-4">
                 <div className="flex flex-col">
                   <span className="text-[10px] font-mono text-slate-500 uppercase">Service Estimated value</span>
                   <div className="flex items-baseline gap-2 mt-0.5">
@@ -289,7 +289,7 @@ export default function BoostView({ onAddToCart, onNavigateToCart }: BoostViewPr
                   placeholder="https://www.reddit.com/r/cryptocurrency/comments/..."
                   value={targetUrl}
                   onChange={(e) => setTargetUrl(e.target.value)}
-                  className="w-full px-3.5 py-2.5 bg-[#0f0b08] border border-[#2c2016] rounded-xl text-white text-sm focus:outline-none focus:border-[#c59b27]"
+                  className="w-full px-3.5 py-2.5 bg-[#110b07] border border-[#3d2b1c] rounded-xl text-white text-sm focus:outline-none focus:border-[#c59b27]"
                 />
               </div>
 
@@ -303,11 +303,11 @@ export default function BoostView({ onAddToCart, onNavigateToCart }: BoostViewPr
                   placeholder="This is an awesome coin launch! Aping in immediately.&#10;Incredible project, dev team is super active on tg."
                   value={commentsInput}
                   onChange={(e) => setCommentsInput(e.target.value)}
-                  className="w-full px-3.5 py-2.5 bg-[#0f0b08] border border-[#2c2016] rounded-xl text-white text-sm focus:outline-none focus:border-[#c59b27] placeholder:text-slate-600 resize-none font-mono text-xs"
+                  className="w-full px-3.5 py-2.5 bg-[#110b07] border border-[#3d2b1c] rounded-xl text-white text-sm focus:outline-none focus:border-[#c59b27] placeholder:text-slate-600 resize-none font-mono text-xs"
                 ></textarea>
               </div>
 
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between p-4 rounded-xl bg-[#0f0b08] border border-[#2c2016] gap-4">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between p-4 rounded-xl bg-[#110b07] border border-[#3d2b1c] gap-4">
                 <div className="flex flex-col">
                   <span className="text-[10px] font-mono text-slate-500 uppercase">Estimated campaign total</span>
                   <div className="flex items-baseline gap-2 mt-0.5">
@@ -345,7 +345,7 @@ export default function BoostView({ onAddToCart, onNavigateToCart }: BoostViewPr
                     placeholder="e.g., Best way to audit smart contracts in 2026"
                     value={customTitle}
                     onChange={(e) => setCustomTitle(e.target.value)}
-                    className="w-full px-3.5 py-2.5 bg-[#0f0b08] border border-[#2c2016] rounded-xl text-white text-sm focus:outline-none focus:border-[#c59b27]"
+                    className="w-full px-3.5 py-2.5 bg-[#110b07] border border-[#3d2b1c] rounded-xl text-white text-sm focus:outline-none focus:border-[#c59b27]"
                   />
                 </div>
 
@@ -356,7 +356,7 @@ export default function BoostView({ onAddToCart, onNavigateToCart }: BoostViewPr
                   <select
                     value={customNiche}
                     onChange={(e) => setCustomNiche(e.target.value)}
-                    className="w-full px-3.5 py-2.5 bg-[#0f0b08] border border-[#2c2016] rounded-xl text-white text-sm focus:outline-none focus:border-[#c59b27]"
+                    className="w-full px-3.5 py-2.5 bg-[#110b07] border border-[#3d2b1c] rounded-xl text-white text-sm focus:outline-none focus:border-[#c59b27]"
                   >
                     <option value="tech">Crypto / Web3 / Tech niches</option>
                     <option value="saas">Software as a Service (SaaS)</option>
@@ -366,7 +366,7 @@ export default function BoostView({ onAddToCart, onNavigateToCart }: BoostViewPr
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between p-4 rounded-xl bg-[#0f0b08] border border-[#2c2016] gap-4">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between p-4 rounded-xl bg-[#110b07] border border-[#3d2b1c] gap-4">
                 <div className="flex flex-col">
                   <span className="text-[10px] font-mono text-slate-500 uppercase">Fixed package value</span>
                   <div className="flex items-baseline gap-2 mt-0.5">

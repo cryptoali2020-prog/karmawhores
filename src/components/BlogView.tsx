@@ -16,14 +16,14 @@ export default function BlogView() {
       <div className="max-w-4xl mx-auto px-4 py-8">
         <button
           onClick={() => setSelectedArticle(null)}
-          className="inline-flex items-center gap-2 text-slate-400 hover:text-white mb-6 p-2 rounded-lg bg-[#1c1611] border border-[#2c2016] text-xs transition-colors cursor-pointer"
+          className="inline-flex items-center gap-2 text-slate-400 hover:text-white mb-6 p-2 rounded-lg bg-[#231a12] border border-[#3d2b1c] text-xs transition-colors cursor-pointer"
         >
           <ArrowLeft size={14} />
           <span>Back to Articles list</span>
         </button>
 
-        <article className="bg-[#1c1611] rounded-2xl border border-[#2c2016] overflow-hidden p-6 sm:p-8 shadow-xl">
-          <div className="aspect-video w-full rounded-2xl overflow-hidden bg-slate-900 border border-[#2c2016] mb-6">
+        <article className="bg-[#231a12] rounded-2xl border border-[#3d2b1c] overflow-hidden p-6 sm:p-8 shadow-xl">
+          <div className="aspect-video w-full rounded-2xl overflow-hidden bg-[#110b07] border border-[#3d2b1c] mb-6">
             <img
               src={selectedArticle.image}
               alt={selectedArticle.title}
@@ -60,7 +60,7 @@ export default function BlogView() {
             ))}
           </div>
 
-          <div className="bg-[#0f0b08] border border-[#2c2016] rounded-2xl p-5 mt-10 text-xs sm:text-sm text-slate-400">
+          <div className="bg-[#110b07] border border-[#3d2b1c] rounded-2xl p-5 mt-10 text-xs sm:text-sm text-slate-400">
             <span className="font-semibold block text-white mb-1.5 uppercase font-mono tracking-wider text-[11px] text-[#c59b27]">
               Marketing Disclaimer
             </span>
@@ -89,7 +89,7 @@ export default function BlogView() {
         {blogArticles.map((article) => (
           <div
             key={article.id}
-            className="flex flex-col bg-[#1c1611] rounded-2xl border border-[#2c2016] overflow-hidden hover:border-[#c59b27]/40 transition-all duration-300 hover:shadow-lg hover:shadow-black/20 group"
+            className="flex flex-col bg-[#231a12] rounded-2xl border border-[#3d2b1c] overflow-hidden hover:border-[#c59b27]/40 transition-all duration-300 hover:shadow-lg hover:shadow-black/20 group"
           >
             <div className="aspect-video overflow-hidden bg-slate-900 relative">
               <img
@@ -98,7 +98,7 @@ export default function BlogView() {
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#1c1611] to-transparent opacity-65"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-[#231a12] to-transparent opacity-65"></div>
             </div>
 
             <div className="p-5 flex-1 flex flex-col">
