@@ -432,12 +432,6 @@ export default function App() {
           <div>
             &copy; 2026 Buy Reddit accounts High karma and upvotes. All Rights Reserved.
           </div>
-          <div className="flex items-center gap-1">
-            <span>Powered by</span>
-            <a href="https://inkhive.com/product/store/" target="_blank" rel="noreferrer" className="text-[#dec2b1] hover:text-white transition-colors underline bg-[#1f0d08] px-1.5 py-0.5 rounded border border-[#3e271f]">
-              Store Theme
-            </a>
-          </div>
         </div>
       </footer>
 
